@@ -1,0 +1,189 @@
+﻿<Window x:Class="Midterm_Project_The_Matching_Game_.MediumTableWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Midterm_Project_The_Matching_Game_"
+        mc:Ignorable="d"
+        Closing="MediumTableWindow_Closing"
+        Icon="/Images/Background/ph.ico"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="CanMinimize"
+        WindowStyle="None"
+        Height="700"
+        Width="1100">
+
+    <Canvas>
+
+        <Canvas.Background>
+            <ImageBrush ImageSource="/Images/Background/Stars.png"/>
+        </Canvas.Background>
+        <Image Source="/Images/Background/Bonus.png" 
+               Height="90" 
+               Width="180" 
+               Canvas.Left="460" 
+               Canvas.Top="360" Stretch="Fill"/>
+        <Grid Height="180" Width="1100">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Label x:Name="_timerLabel" Width="150" Grid.Column="2" Grid.Row="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontWeight="Bold" FontSize="22" FontFamily="Rockwell Extra Bold">
+                <Label.Background>
+                    <ImageBrush ImageSource="/Images/Background/scoreboard.png"/>
+                </Label.Background>
+            </Label>
+            <Label Grid.Column="3"
+                   Grid.ColumnSpan="2"
+                   Grid.Row="0"
+                   VerticalContentAlignment="Bottom"
+                   HorizontalContentAlignment="Center"
+                   Content="Name"
+                   FontSize="24"
+                   FontWeight="Bold"
+                   Foreground="Wheat"
+                   FontFamily="Rockwell Extra Bold"
+                   x:Name="_playerName"/>
+            <Label Grid.Column="3"
+                   Grid.ColumnSpan="2"
+                   Grid.Row="1"
+                   Grid.RowSpan="3"
+                   Width="200"
+                   x:Name="_playerAvatarLabel"/>
+            <Label Grid.Column="2"
+                   Grid.Row="3"
+                   VerticalContentAlignment="Center"
+                   HorizontalContentAlignment="Center"
+                   Content="Round 1"
+                   FontSize="30"
+                   FontWeight="Bold"
+                   Foreground="Wheat"
+                   FontFamily="Rockwell Extra Bold"
+                   x:Name="_roundLevelLabel"/>
+            <Label Grid.Column="0"
+                   Grid.Row="0"
+                   VerticalContentAlignment="Center"
+                   HorizontalContentAlignment="Right"
+                   Content="Difficulty:"
+                   FontSize="20"
+                   FontWeight="Bold"
+                   Foreground="Wheat"
+                   FontFamily="Rockwell Extra Bold"/>
+            <Label Grid.Column="1"
+                   Grid.Row="0"
+                   VerticalContentAlignment="Center"
+                   HorizontalContentAlignment="Center"
+                   Content="Difficulty:"
+                   FontSize="20"
+                   FontWeight="Bold"
+                   Foreground="Wheat"
+                   FontFamily="Rockwell Extra Bold"
+                   x:Name="_difficultyLabel"/>
+            <Label Grid.Column="0"
+                   Grid.Row="1"
+                   VerticalContentAlignment="Center"
+                   HorizontalContentAlignment="Right"
+                   Content="Game type:"
+                   FontSize="20"
+                   FontWeight="Bold"
+                   Foreground="Wheat"
+                   FontFamily="Rockwell Extra Bold"/>
+            <TextBlock Grid.Column="1"
+                   Grid.Row="1"
+                   TextWrapping="Wrap"
+                   Text="Assorted kind pairing"
+                   TextAlignment="Center"
+                   FontSize="18"
+                   FontWeight="Bold"
+                   Foreground="Wheat"
+                   FontFamily="Rockwell Extra Bold"
+                   x:Name="_gameType"/>
+            <ProgressBar Grid.Column="2"
+                         Grid.Row="2"
+                         Value="100"
+                         Height="40"
+                         Maximum="20"
+                         Minimum="0"
+                         x:Name="_lifePointsProgressBar"/>
+            <TextBlock Grid.Column="2"
+                       Grid.Row="2"
+                       Text="{Binding ElementName=_lifePointsProgressBar, Path=Value, StringFormat={}{0:0}}"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" 
+                       FontSize="20"
+                       FontWeight="Bold" />
+        </Grid>
+
+        <Grid Height="450"
+              Canvas.Left="100"
+              Canvas.Top="180"
+              Width="900"
+              x:Name="myGrid">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Button Grid.Column="0" Grid.Row="0" Cursor="Hand" PreviewMouseDown="Buttons_PreviewMouseDown" Click="IfButtonIsClick_Click"/>
+            <Button Grid.Column="1" Grid.Row="0" Cursor="Hand" PreviewMouseDown="Buttons_PreviewMouseDown" Click="IfButtonIsClick_Click"/>
+            <Button Grid.Column="2" Grid.Row="0" Cursor="Hand" PreviewMouseDown="Buttons_PreviewMouseDown" Click="IfButtonIsClick_Click"/>
+            <Button Grid.Column="3" Grid.Row="0" Cursor="Hand" PreviewMouseDown="Buttons_PreviewMouseDown" Click="IfButtonIsClick_Click"/>
+            <Button Grid.Column="4" Grid.Row="0" Cursor="Hand" PreviewMouseDown="Buttons_PreviewMouseDown" Click="IfButtonIsClick_Click"/>
+
+            <Button Grid.Column="0" Grid.Row="1" Cursor="Hand" PreviewMouseDown="Buttons_PreviewMouseDown" Click="IfButtonIsClick_Click"/>
+            <Button Grid.Column="1" Grid.Row="1" Cursor="Hand" PreviewMouseDown="Buttons_PreviewMouseDown" Click="IfButtonIsClick_Click"/>
+            <Button Grid.Column="2" Grid.Row="1" Cursor="Hand" PreviewMouseDown="Buttons_PreviewMouseDown" Click="IfButtonIsClick_Click"/>
+            <Button Grid.Column="3" Grid.Row="1" Cursor="Hand" PreviewMouseDown="Buttons_PreviewMouseDown" Click="IfButtonIsClick_Click"/>
+            <Button Grid.Column="4" Grid.Row="1" Cursor="Hand" PreviewMouseDown="Buttons_PreviewMouseDown" Click="IfButtonIsClick_Click"/>
+
+            <Button Grid.Column="0" Grid.Row="2" Cursor="Hand" PreviewMouseDown="Buttons_PreviewMouseDown" Click="IfButtonIsClick_Click"/>
+            <Button Grid.Column="1" Grid.Row="2" Cursor="Hand" PreviewMouseDown="Buttons_PreviewMouseDown" Click="IfButtonIsClick_Click"/>
+            <Button Grid.Column="3" Grid.Row="2" Cursor="Hand" PreviewMouseDown="Buttons_PreviewMouseDown" Click="IfButtonIsClick_Click"/>
+            <Button Grid.Column="4" Grid.Row="2" Cursor="Hand" PreviewMouseDown="Buttons_PreviewMouseDown" Click="IfButtonIsClick_Click"/>
+
+            <Button Grid.Column="0" Grid.Row="3" Cursor="Hand" PreviewMouseDown="Buttons_PreviewMouseDown" Click="IfButtonIsClick_Click"/>
+            <Button Grid.Column="1" Grid.Row="3" Cursor="Hand" PreviewMouseDown="Buttons_PreviewMouseDown" Click="IfButtonIsClick_Click"/>
+            <Button Grid.Column="2" Grid.Row="3" Cursor="Hand" PreviewMouseDown="Buttons_PreviewMouseDown" Click="IfButtonIsClick_Click"/>
+            <Button Grid.Column="3" Grid.Row="3" Cursor="Hand" PreviewMouseDown="Buttons_PreviewMouseDown" Click="IfButtonIsClick_Click"/>
+            <Button Grid.Column="4" Grid.Row="3" Cursor="Hand" PreviewMouseDown="Buttons_PreviewMouseDown" Click="IfButtonIsClick_Click"/>
+
+            <Button Grid.Column="0" Grid.Row="4" Cursor="Hand" PreviewMouseDown="Buttons_PreviewMouseDown" Click="IfButtonIsClick_Click"/>
+            <Button Grid.Column="1" Grid.Row="4" Cursor="Hand" PreviewMouseDown="Buttons_PreviewMouseDown" Click="IfButtonIsClick_Click"/>
+            <Button Grid.Column="2" Grid.Row="4" Cursor="Hand" PreviewMouseDown="Buttons_PreviewMouseDown" Click="IfButtonIsClick_Click"/>
+            <Button Grid.Column="3" Grid.Row="4" Cursor="Hand" PreviewMouseDown="Buttons_PreviewMouseDown" Click="IfButtonIsClick_Click"/>
+            <Button Grid.Column="4" Grid.Row="4" Cursor="Hand" PreviewMouseDown="Buttons_PreviewMouseDown" Click="IfButtonIsClick_Click"/>
+        </Grid>
+
+        <Button Content="Cancel" 
+                Height="50" 
+                Width="130" 
+                Canvas.Left="480" 
+                FontSize="20"
+                FontWeight="Bold"
+                FontFamily="Rockwell Extra Bold"
+                RenderTransformOrigin="0.5,0.5" 
+                Click="CancelButton_Click"
+                Canvas.Top="640"
+                Background="#00000000"
+                Foreground="Wheat"/>
+    </Canvas>
+</Window>

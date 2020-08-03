@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Midterm_Project(The Matching Game)", "Midterm_Project(The Matching Game)\Midterm_Project(The Matching Game).csproj", "{40A8AECA-47B8-43FB-A773-8FB2B99F780F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{40A8AECA-47B8-43FB-A773-8FB2B99F780F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40A8AECA-47B8-43FB-A773-8FB2B99F780F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40A8AECA-47B8-43FB-A773-8FB2B99F780F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40A8AECA-47B8-43FB-A773-8FB2B99F780F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {31A2E7C3-2A74-4A90-94A0-5C0683C848F5}
+	EndGlobalSection
+EndGlobal
